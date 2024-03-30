@@ -13,8 +13,10 @@ public class LoginController {
 
   @Autowired LoginService service;
 
-  @PostMapping(path = "api/v1/public/auth/validate", consumes = { "application/json", "application/xml" }, produces = {
-			"application/json", "application/xml" })
+  @PostMapping(
+      path = "api/v1/public/auth/validate",
+      consumes = {"application/json", "application/xml"},
+      produces = {"application/json", "application/xml"})
   public LoginResponse usersLogin(@RequestBody LoginRequest request) {
     return service.validateUser(request);
   }

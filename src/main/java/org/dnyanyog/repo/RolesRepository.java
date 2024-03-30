@@ -8,6 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Component
 public interface RolesRepository extends JpaRepository<Roles, Long> { // Query Class
-	
 }
-

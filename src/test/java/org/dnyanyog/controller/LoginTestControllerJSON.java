@@ -1,5 +1,8 @@
 package org.dnyanyog.controller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,8 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.junit.jupiter.api.Test;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -25,7 +26,10 @@ public class LoginTestControllerJSON extends AbstractTestNGSpringContextTests {
     RequestBuilder requestBuilder =
         MockMvcRequestBuilders.post("/public/auth/validate")
             .content(
-                "{\r\n" + "	\"userName\":\"abhi\",\r\n" + "    \"password\":\"test@123\"\r\n" + "}")
+                "{\r\n"
+                    + "	\"userName\":\"abhi\",\r\n"
+                    + "    \"password\":\"test@123\"\r\n"
+                    + "}")
             .contentType(MediaType.APPLICATION_JSON_VALUE)
             .accept(MediaType.APPLICATION_JSON_VALUE);
 
