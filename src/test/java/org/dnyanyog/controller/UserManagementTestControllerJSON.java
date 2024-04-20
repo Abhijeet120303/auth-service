@@ -27,7 +27,8 @@ public class UserManagementTestControllerJSON extends AbstractTestNGSpringContex
         MockMvcRequestBuilders.post("/api/v1/auth/user/add")
             .content(
                 " {\r\n"
-                    + "    \"userName\":\"abhi11211\",\r\n"
+                    + "    \"userName\":\"abhi611"
+                    + "1211\",\r\n"
                     + "    \"password\":\"test@1232\",\r\n"
                     + "    \"emailId\":\"abhi@gmail.com\",\r\n"
                     + "    \"age\":\"21\",\r\n"
