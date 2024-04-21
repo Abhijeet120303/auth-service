@@ -4,10 +4,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
-	<changeSet id="20240420" author="Abhijeet Nirphal">
+	<changeSet id="20240420-5" author="Abhijeet Nirphal">
 
 		<createTable tableName="Users"
-			schemaName="authentication_service_liqibase">
+			schemaName="authentication_service_liqibase_login">
 
 			<column name="customer_code" type="bigint">
 				<constraints primaryKey="true" nullable="false" />
@@ -15,7 +15,7 @@
 			<column name="user_code" type="int">
 				<constraints nullable="false" />
 			</column>
-			<column name="userId" type="bigint">
+			<column name="user_id" type="bigint">
 				<constraints nullable="false" />
 			</column>
 			<column name="user_name" type="varchar(255)" />
@@ -24,7 +24,7 @@
 				<constraints unique="true" />
 			</column>
 			<column name="age" type="int" />
-			<column name="aesKey" type="varchar(255)" />
+			<column name="aes_Key" type="varchar(255)" />
 		</createTable>
 
 	</changeSet>

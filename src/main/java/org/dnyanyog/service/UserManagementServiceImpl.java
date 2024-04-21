@@ -36,7 +36,7 @@ public class UserManagementServiceImpl implements UserManagementService {
               .setEmail_id(request.getEmailId())
               .setAge(request.getAge())
               .setUserId(request.getUserId())
-              .setAesKey(aesKey);
+              .setAes_Key(aesKey);
 
       try {
         userTable = repo.save(userTable);
@@ -70,7 +70,7 @@ public class UserManagementServiceImpl implements UserManagementService {
       response.setMessage("User found");
       response.setUserCode(user.getUser_code());
       response.getUserData().setUsername(user.getUserName());
-      response.getUserData().setPassword(decryptAES(user.getPassword(), user.getAesKey()));
+      response.getUserData().setPassword(decryptAES(user.getPassword(), user.getAes_Key()));
       response.getUserData().setEmail(user.getEmail_id());
       response.getUserData().setAge(user.getAge());
       response.getUserData().setUserId(user.getUserId());

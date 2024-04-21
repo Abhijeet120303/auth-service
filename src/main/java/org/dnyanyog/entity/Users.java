@@ -16,7 +16,8 @@ public class Users {
 
   @GeneratedValue @Id @Column private int user_code;
 
-  @Column private long userId;
+  @Column(name = "user_id")
+  private long userId;
 
   @Column(name = "user_name")
   private String userName;
@@ -27,7 +28,7 @@ public class Users {
 
   @Column private int age;
 
-  @Column private String aesKey;
+  @Column private String aes_Key;
 
   public static Users getInstance() {
     return new Users();
@@ -88,12 +89,12 @@ public class Users {
     return this;
   }
 
-  public String getAesKey() {
-    return aesKey;
+  public String getAes_Key() {
+    return aes_Key;
   }
 
-  public Users setAesKey(String aesKey) {
-    this.aesKey = aesKey;
+  public Users setAes_Key(String aes_Key) {
+    this.aes_Key = aes_Key;
     return this;
   }
 }
